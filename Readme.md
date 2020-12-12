@@ -18,4 +18,4 @@
 
 10. LAstly Build the Application in visual studio and run the Application to view in Browser.
 
-**** Please find DB back file above code
+**** Please find DB backup file above code (CapitalPlatforms.bak). **** 
