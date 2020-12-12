@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Accounts.Web.Models.AccountsModel>
+
+<p>
+    @Html.ActionLink("Create New Account", "AddAccountDetails")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountHolder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BankName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpeningDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountHolder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BankName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpeningDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditAccountDetails", new { id=item.AccountNumber/* id=item.PrimaryKey */ }) |
+            @*@Html.ActionLink("Details", "Details", new { id = item.AccountNumber/* id=item.PrimaryKey */ }) |*@
+            @Html.ActionLink("Delete", "DeleteAccount", new { id = item.AccountNumber/* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
