@@ -42,18 +42,18 @@ namespace Accounts.Web.Controllers
                     Accounts.Web.DBOperations.DBOperations AccountHolder = new Accounts.Web.DBOperations.DBOperations();
 
                     var count = AccountHolder.getAllAccountNumbers().Where(x=>x.AccountNumber== Account.AccountNumber);
-                    if (count != null)
-                    {
-                        ViewBag.Message = "Account Already Existed!, Please check Account Number";
-                    }
-                    else
-                    {
+                    //if (count != null)
+                    //{
+                    //    ViewBag.Message = "Account Already Existed!, Please check Account Number";
+                    //}
+                    //else
+                    //{
                         if (AccountHolder.AddAccountHolder(Account))
                         {
                             ViewBag.Message = "Account details added successfully";
                         }
                     }
-                }
+                //}
 
                 return View();
             }
