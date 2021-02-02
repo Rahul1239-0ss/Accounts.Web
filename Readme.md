@@ -17,3 +17,5 @@
 9. Added Redirctions in every page.
 
 10. LAstly Build the Application in visual studio and run the Application to view in Browser.
+
+**** Please find DB backup file above code (CapitalPlatforms.bak). **** 
